@@ -33,7 +33,12 @@ nav {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
-.nav-logo { font-family: var(--syne); font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px; }
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--syne); font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.nav-logo img { width: 32px; height: 32px; object-fit: contain; }
 .nav-logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
@@ -277,7 +282,8 @@ footer {
   padding: 32px 48px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.footer-logo { font-family: var(--syne); font-size: 18px; font-weight: 800; color: #fff; }
+.footer-logo { display: flex; align-items: center; gap: 8px; font-family: var(--syne); font-size: 18px; font-weight: 800; color: #fff; }
+.footer-logo img { width: 26px; height: 26px; object-fit: contain; filter: brightness(0) invert(1); }
 .footer-logo span { color: var(--accent); }
 .footer-links { display: flex; gap: 24px; }
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
@@ -319,7 +325,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Tesserato<span>.</span>club</div>
+  <a class="nav-logo" href="/">
+    <img src="./logo_tesserato.club.png" alt="Tesserato.club">
+    Tesserato<span>.</span>club
+  </a>
   <div class="nav-links">
     <a href="#funzionalita">Funzionalità</a>
     <a href="#prezzi">Prezzi</a>
@@ -553,7 +562,10 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Tesserato<span>.</span>club</div>
+  <div class="footer-logo">
+    <img src="./logo_tesserato.club.png" alt="Tesserato.club">
+    Tesserato<span>.</span>club
+  </div>
   <div class="footer-links">
     <a href="#funzionalita">Funzionalità</a>
     <a href="#prezzi">Prezzi</a>
