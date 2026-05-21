@@ -303,15 +303,18 @@ footer {
 }
 @media (max-width: 768px) {
   /* Nav */
-  nav { padding: 12px 16px; }
+  nav { padding: 10px 14px; min-height: unset; }
   .nav-links { display: none; }
+  .nav-logo { font-size: 16px; }
+  .nav-logo img { width: 28px; height: 28px; }
   /* Mostra solo il bottone Accedi in nav su mobile */
   .nav-accedi-mobile {
     display: inline-flex !important;
-    font-size: 13px; padding: 7px 14px;
-    background: var(--accent); color: #fff;
-    border-radius: 8px; font-weight: 600;
-    text-decoration: none;
+    font-size: 14px; padding: 10px 18px;
+    background: var(--accent); color: #fff !important;
+    border-radius: 10px; font-weight: 700;
+    text-decoration: none; white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(26,111,255,0.35);
   }
 
   /* Hero ridotto */
@@ -373,9 +376,12 @@ footer {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
-/* Fallback: se JS non funziona, tutto visibile dopo 1s */
 @media (prefers-reduced-motion: reduce) {
   .fade-up { opacity: 1; transform: none; }
+}
+/* Su mobile forza tutto visibile — evita pagine bianche */
+@media (max-width: 768px) {
+  .fade-up { opacity: 1 !important; transform: none !important; }
 }
 </style>
 </head>
@@ -394,14 +400,14 @@ footer {
     <a href="#demo" class="nav-cta">Richiedi demo →</a>
   </div>
   <!-- Bottone Accedi visibile su mobile nella nav -->
-  <a href="https://app.tesserato.club" class="nav-accedi-mobile" target="_blank" style="display:none">Accedi ↗</a>
+  <a href="https://app.tesserato.club" class="nav-accedi-mobile" target="_blank" style="display:none">🔑 Accedi</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-content fade-up">
+  <div class="hero-content">
     <div class="hero-badge">Nuovo · Stagione 2026/2027</div>
     <h1>Il gestionale che <em>capisce</em> lo sport</h1>
     <p class="hero-sub">Gestisci atleti, iscrizioni, pagamenti e documenti per la tua società sportiva. Tutto in un posto, accessibile da qualsiasi dispositivo.</p>
@@ -461,8 +467,8 @@ footer {
 <!-- FEATURES -->
 <section class="section" id="funzionalita">
   <div class="section-label">Funzionalità</div>
-  <h2 class="section-title fade-up">Tutto quello che serve,<br>niente di più</h2>
-  <p class="section-sub fade-up">Progettato specificamente per le società sportive italiane — ASD, SSD, S.r.l. sportive.</p>
+  <h2 class="section-title">Tutto quello che serve,<br>niente di più</h2>
+  <p class="section-sub">Progettato specificamente per le società sportive italiane — ASD, SSD, S.r.l. sportive.</p>
   <div class="features-grid">
     <div class="feature-card fade-up">
       <div class="feature-icon">👤</div>
@@ -500,8 +506,8 @@ footer {
 <!-- HOW IT WORKS -->
 <section class="section" id="come-funziona" style="background:var(--bg)">
   <div class="section-label">Come funziona</div>
-  <h2 class="section-title fade-up">Operativo in pochi minuti</h2>
-  <p class="section-sub fade-up">Nessuna installazione, nessun tecnico. Solo un browser e sei pronto.</p>
+  <h2 class="section-title">Operativo in pochi minuti</h2>
+  <p class="section-sub">Nessuna installazione, nessun tecnico. Solo un browser e sei pronto.</p>
   <div class="steps">
     <div class="step fade-up">
       <div class="step-num">1</div>
